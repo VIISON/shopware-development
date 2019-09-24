@@ -19,8 +19,7 @@
         },
         {
             "type": "vcs",
-            "url": "git@github.com:pickware/shopware-platform.git",
-            "no-api": true
+            "url": "git@github.com:pickware/shopware-platform.git"
         }
     ],
     "config": {
