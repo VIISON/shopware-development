@@ -19,7 +19,8 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/VIISON/shopware-platform.git"
+            "url": "git@github.com:pickware/shopware-platform.git",
+            "no-api": true
         }
     ],
     "config": {
