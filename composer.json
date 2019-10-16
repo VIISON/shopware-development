@@ -11,11 +11,8 @@
             }
         },
         {
-            "type": "path",
-            "url": "platform",
-            "options": {
-                "symlink": true
-            }
+            "type": "vcs",
+            "url": "git@github.com:VIISON/shopware-platform.git"
         }
     ],
     "config": {
@@ -34,7 +31,14 @@
         "shopware/platform": "^6.1.0"
     },
     "scripts": {
+        "symlink-platform": [
+            "test -d \"platform\" && rm -rf vendor/shopware/platform && ln -s ../../platform vendor/shopware/platform"
+        ],
+        "post-install-cmd": [
+            "@symlink-platform"
+        ],
         "post-update-cmd": [
+            "@symlink-platform",
             "ln -sf $PWD/dev-ops/pre-commit vendor/shopware/platform/.git/hooks/pre-commit"
         ]
     },
