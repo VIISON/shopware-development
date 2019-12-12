@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef06a3f851d5b934085ff29e1e57cc4c",
+    "content-hash": "45ebb92ee54d00ba77a0809d5dd74ca2",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -156,16 +156,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.4",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527"
+                "reference": "62e8fc2dc550e5d6d8c9360c7721662670f58149"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
-                "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/62e8fc2dc550e5d6d8c9360c7721662670f58149",
+                "reference": "62e8fc2dc550e5d6d8c9360c7721662670f58149",
                 "shasum": ""
             },
             "require": {
@@ -176,7 +176,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8",
                 "psr/log": "^1.0",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0"
+                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
             },
             "type": "library",
             "extra": {
@@ -208,7 +208,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2019-08-30T08:44:50+00:00"
+            "time": "2019-12-11T14:44:42+00:00"
         },
         {
             "name": "composer/composer",
@@ -4009,16 +4009,16 @@
         },
         {
             "name": "shopware/platform",
-            "version": "v6.1.0-rc2",
+            "version": "6.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shopware/platform.git",
-                "reference": "8d7ca39e3d07eade27c94665fe471657ce80c2ce"
+                "reference": "87e2b63f3acdb79da9c06900b95ea93e0e82abaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shopware/platform/zipball/8d7ca39e3d07eade27c94665fe471657ce80c2ce",
-                "reference": "8d7ca39e3d07eade27c94665fe471657ce80c2ce",
+                "url": "https://api.github.com/repos/shopware/platform/zipball/87e2b63f3acdb79da9c06900b95ea93e0e82abaf",
+                "reference": "87e2b63f3acdb79da9c06900b95ea93e0e82abaf",
                 "shasum": ""
             },
             "require": {
@@ -4171,7 +4171,7 @@
                 "framework",
                 "shopware"
             ],
-            "time": "2019-12-10T13:41:41+00:00"
+            "time": "2019-12-12T10:40:19+00:00"
         },
         {
             "name": "sroze/messenger-enqueue-transport",
@@ -10206,11 +10206,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "shopware/platform": 20
     },
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "~7.2"

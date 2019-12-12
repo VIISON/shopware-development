@@ -9,17 +9,11 @@
             "options": {
                 "symlink": true
             }
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:VIISON/shopware-platform.git"
         }
     ],
     "config": {
         "optimize-autoloader": true
     },
-    "prefer-stable": true,
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Shopware\\Development\\": "src/"
@@ -28,7 +22,7 @@
     "require": {
         "php": "~7.2",
         "ocramius/package-versions": "1.4.0",
-        "shopware/platform": "^6.1.0"
+        "shopware/platform": "^6.1.0@dev"
     },
     "scripts": {
         "symlink-platform": [
