@@ -1,15 +1,23 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Shopware\Development;
 
-use Composer\Autoload\ClassLoader;
 use Doctrine\DBAL\Connection;
+use Shopware\Core\Framework\Plugin\KernelPluginLoader\KernelPluginLoader;
 
 class Kernel extends \Shopware\Core\Kernel
 {
-    public function __construct(string $environment, bool $debug, ClassLoader $classLoader, ?string $version = null, ?Connection $connection = null)
-    {
-        parent::__construct($environment, $debug, $classLoader, $version);
+    public function __construct(
+        string $environment,
+        bool $debug,
+        KernelPluginLoader $pluginLoader,
+        string $cacheId,
+        ?string $version = null,
+        ?Connection $connection = null
+    ) {
+        parent::__construct($environment, $debug, $pluginLoader, $cacheId, $version);
 
         self::$connection = $connection;
         if (!$connection) {

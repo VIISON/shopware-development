@@ -1,5 +1,3 @@
-/composer.lock
-
 /vendor/
 /bin/vendor/
 
@@ -10,6 +8,8 @@
 
 /config/jwt/*
 !/config/jwt/.gitkeep
+/config/packages/local.yaml
+/config/packages/local.yml
 
 /custom/*
 
@@ -28,6 +28,7 @@
 /public/media/*
 !/public/media/.gitkeep
 /public/theme/*
+/public/sitemap/*
 /public/thumbnail/*
 !/public/thumbnail/.gitkeep
 /public/plugins/*

@@ -31,17 +31,21 @@ const:
   ESLINT_DISABLE: "true"
   CYPRESS_HEADLESS: "true"
   CYPRESS_ENV: "Administration"
+  CYPRESS_FOLDER: "administration"
   CYPRESS_PARAMS: ""
   CYPRESS_LOCAL: false
   CHROME_BIN: ""
   E2E_RESTORE_DUMP_PATH: /tmp/shopware_e2e_dump.sql.gz
-  SHOPWARE_SES_HOSTS: "elasticsearch:9200"
-  SHOPWARE_SES_ENABLED: "0"
-  SHOPWARE_SES_INDEXING_ENABLED: "0"
-  SHOPWARE_SES_INDEX_PREFIX: "sw"
+  SHOPWARE_ES_HOSTS: "elasticsearch:9200"
+  SHOPWARE_ES_ENABLED: "0"
+  SHOPWARE_ES_INDEXING_ENABLED: "0"
+  SHOPWARE_ES_INDEX_PREFIX: "sw"
+  SHOPWARE_HTTP_CACHE_ENABLED: "0"
+  SHOPWARE_HTTP_DEFAULT_TTL: 7200
   FEATURES: |
     FEATURE_NEXT_516=1
   DEVPORT: "8080"
+  VERSION:
 
 dynamic:
   USERKEY: echo "$(id -u):$(id -g)"
@@ -62,19 +66,6 @@ environments:
       - source: ".env.dist"
         destination: ".env"
       - source: "dev-ops/docker/docker-compose.override.yml"
-        destination: "./docker-compose.override.yml"
-
-  bamboo:
-    paths:
-      - "dev-ops/common/actions"
-      - "dev-ops/bamboo.shopware.com/actions"
-    const:
-      APP_ENV: prod
-      APP_URL: "http://docker.vm:8000"
-    templates:
-      - source: ".env.dist"
-        destination: ".env"
-      - source: "dev-ops/bamboo.shopware.com/docker-compose.override.yml"
         destination: "./docker-compose.override.yml"
 
   administration:
@@ -104,24 +95,3 @@ environments:
         DOCS_DIR: "./vendor/shopware/platform/src/Docs"
     paths:
       - "dev-ops/docs/actions"
-
-  analyze:
-    const:
-        PLATFORM_DIR: "./vendor/shopware/platform"
-    templates:
-      - source: "./dev-ops/analyze/template/depfile.domain.core.deep.yml"
-        destination: "./dev-ops/analyze/tmp/depfiles/depfile.domain.core.deep.yml"
-
-      - source: "./dev-ops/analyze/template/depfile.domain.core.framework.dal.yml"
-        destination: "./dev-ops/analyze/tmp/depfiles/depfile.domain.core.framework.dal.yml"
-
-      - source: "./dev-ops/analyze/template/depfile.domain.platform.yml"
-        destination: "./dev-ops/analyze/tmp/depfiles/depfile.domain.platform.yml"
-
-      - source: "./dev-ops/analyze/template/depfile.technical.repositories.yml"
-        destination: "./dev-ops/analyze/tmp/depfiles/depfile.technical.repositories.yml"
-
-      - source: "./dev-ops/analyze/template/depfile.yml"
-        destination: "./dev-ops/analyze/tmp/depfiles/depfile.yml"
-    paths:
-      - "dev-ops/analyze/actions"

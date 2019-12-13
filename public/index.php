@@ -1,12 +1,18 @@
 <?php
 
+use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Exception\ConnectionException;
 use PackageVersions\Versions;
+use Shopware\Core\Framework\Plugin\KernelPluginLoader\DbalKernelPluginLoader;
 use Shopware\Core\Framework\Routing\RequestTransformerInterface;
+use Shopware\Core\Framework\Uuid\Uuid;
 use Shopware\Development\Kernel;
+use Shopware\Storefront\Framework\Cache\CacheStore;
+use Shopware\Storefront\Framework\Csrf\CsrfPlaceholderHandler;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\HttpCache\HttpCache;
 
 $classLoader = require __DIR__.'/../vendor/autoload.php';
 
@@ -40,13 +46,33 @@ $request = Request::createFromGlobals();
 $connection = Kernel::getConnection();
 
 if ($env === 'dev') {
-    $connection->getConfiguration()->setSQLLogger(new \Doctrine\DBAL\Logging\DebugStack());
+    $connection->getConfiguration()->setSQLLogger(
+        new \Shopware\Core\Profiling\Doctrine\DebugStack()
+    );
+}
+
+function getCacheId(Connection $connection): string
+{
+    try {
+        $cacheId = $connection->fetchColumn(
+            'SELECT `value` FROM app_config WHERE `key` = :key',
+            ['key' => 'cache-id']
+        );
+    } catch (\Exception $e) {
+        return Uuid::randomHex();
+    }
+
+    return $cacheId ?? Uuid::randomHex();
 }
 
 try {
     $shopwareVersion = Versions::getVersion('shopware/platform');
 
-    $kernel = new Kernel($env, $debug, $classLoader, $shopwareVersion, $connection);
+    $pluginLoader = new DbalKernelPluginLoader($classLoader, null, $connection);
+
+    $cacheId = getCacheId($connection);
+
+    $kernel = new Kernel($env, $debug, $pluginLoader, $cacheId, $shopwareVersion, $connection);
     $kernel->boot();
 
     // resolves seo urls and detects storefront sales channels
@@ -54,9 +80,23 @@ try {
         ->get(RequestTransformerInterface::class)
         ->transform($request);
 
+    $csrfTokenHelper = $kernel->getContainer()->get(CsrfPlaceholderHandler::class);
+
+    $enabled = $kernel->getContainer()->getParameter('shopware.http.cache.enabled');
+    if ($enabled) {
+        $store = $kernel->getContainer()->get(CacheStore::class);
+
+        $kernel = new HttpCache($kernel, $store, null, ['debug' => $debug]);
+    }
+
     $response = $kernel->handle($request);
+
+    // replace csrf placeholder with fresh tokens
+    $response = $csrfTokenHelper->replaceCsrfToken($response);
+
 } catch (ConnectionException $e) {
     throw new RuntimeException($e->getMessage());
 }
+
 $response->send();
 $kernel->terminate($request, $response);

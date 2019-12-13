@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #DESCRIPTION: fix code style in src folder
 
-php ./vendor/shopware/platform/bin/php-cs-fixer.phar fix -v --config=vendor/shopware/platform/.php_cs.dist vendor/shopware/platform/src src
+if [ -e vendor/shopware/platform/easy-coding-standard.yml ]; then php dev-ops/analyze/vendor/bin/ecs check --fix vendor/shopware/platform/src --config vendor/shopware/platform/easy-coding-standard.yml; else php dev-ops/analyze/vendor/bin/php-cs-fixer fix -v --config=vendor/shopware/platform/.php_cs.dist; fi
