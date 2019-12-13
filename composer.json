@@ -16,11 +16,6 @@
             "options": {
                 "symlink": true
             }
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:pickware/shopware-platform.git",
-            "no-api": true
         }
     ],
     "config": {
