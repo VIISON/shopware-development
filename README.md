@@ -1,6 +1,9 @@
-# Shopware 6 development template
+# Shopware 6 development template for Pickware plugins
 
 This repository is a template for local development and enables you to create a running Shopware 6 instance.
-Use this setup for developing directly on Shopware 6 or for developing plugins for Shopware 6.
+Use this setup for developing Pickware plugins for Shopware 6.
 
-The installation guide, together with the complete documentation, is available at [docs.shopware.com](https://docs.shopware.com/en/shopware-platform-dev-en/getting-started).
+## Installation: 
+1. Optional: Clone the repo `shopware/platform` to directory `platform` in this repo. This directory will be automatically symlinked later. Ensure that you checkout a compatible branch/tag there. (See which one was installed by composer.) 
+2. Run `bin/setup`.
+3. Run `./psh.phar install`.
