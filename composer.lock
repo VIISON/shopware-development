@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27b3ea1de47cf31345fa8044c98e9a34",
+    "content-hash": "26e5e78ff2cb33ef8820ae92827df231",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -4010,16 +4010,16 @@
         },
         {
             "name": "shopware/platform",
-            "version": "6.1.x-dev",
+            "version": "v6.1.0-rc4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shopware/platform.git",
-                "reference": "9b01d7570d97baa6c8b0f9577c9892bedd00e911"
+                "reference": "aa94506f5e051c024b4b359016fb1d6a23c9c04e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shopware/platform/zipball/9b01d7570d97baa6c8b0f9577c9892bedd00e911",
-                "reference": "9b01d7570d97baa6c8b0f9577c9892bedd00e911",
+                "url": "https://api.github.com/repos/shopware/platform/zipball/aa94506f5e051c024b4b359016fb1d6a23c9c04e",
+                "reference": "aa94506f5e051c024b4b359016fb1d6a23c9c04e",
                 "shasum": ""
             },
             "require": {
@@ -4172,7 +4172,7 @@
                 "framework",
                 "shopware"
             ],
-            "time": "2020-01-08T12:34:24+00:00"
+            "time": "2020-01-06T10:49:34+00:00"
         },
         {
             "name": "sroze/messenger-enqueue-transport",
@@ -10210,7 +10210,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "shopware/platform": 20
+        "shopware/platform": 5
     },
     "prefer-stable": false,
     "prefer-lowest": false,
