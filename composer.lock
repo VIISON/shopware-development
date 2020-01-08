@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26e5e78ff2cb33ef8820ae92827df231",
+    "content-hash": "b699ae0f0a0f984107b8f6177dee30a9",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -4010,16 +4010,16 @@
         },
         {
             "name": "shopware/platform",
-            "version": "v6.1.0-rc4",
+            "version": "dev-pickware/fix-production-source-maps",
             "source": {
                 "type": "git",
-                "url": "https://github.com/shopware/platform.git",
-                "reference": "aa94506f5e051c024b4b359016fb1d6a23c9c04e"
+                "url": "https://github.com/pickware/shopware-platform.git",
+                "reference": "66e644c06c0fe808320d2a1f20c5f7c9920e0df6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shopware/platform/zipball/aa94506f5e051c024b4b359016fb1d6a23c9c04e",
-                "reference": "aa94506f5e051c024b4b359016fb1d6a23c9c04e",
+                "url": "https://api.github.com/repos/pickware/shopware-platform/zipball/66e644c06c0fe808320d2a1f20c5f7c9920e0df6",
+                "reference": "66e644c06c0fe808320d2a1f20c5f7c9920e0df6",
                 "shasum": ""
             },
             "require": {
@@ -4162,7 +4162,6 @@
                     "src/**/Test/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4172,7 +4171,11 @@
                 "framework",
                 "shopware"
             ],
-            "time": "2020-01-06T10:49:34+00:00"
+            "support": {
+                "source": "https://github.com/pickware/shopware-platform/tree/pickware/fix-production-source-maps",
+                "issues": "https://github.com/pickware/shopware-platform/issues"
+            },
+            "time": "2020-01-08T13:04:17+00:00"
         },
         {
             "name": "sroze/messenger-enqueue-transport",
@@ -10207,10 +10210,17 @@
             "time": "2019-11-24T13:36:37+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "v6.1.0-rc4",
+            "alias_normalized": "6.1.0.0-RC4",
+            "version": "dev-pickware/fix-production-source-maps",
+            "package": "shopware/platform"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "shopware/platform": 5
+        "shopware/platform": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

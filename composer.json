@@ -9,6 +9,10 @@
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:pickware/shopware-platform.git"
         }
     ],
     "config": {
@@ -22,19 +26,7 @@
     "require": {
         "php": "~7.2",
         "ocramius/package-versions": "1.4.0",
-        "shopware/platform": "^6.1.0@rc"
-    },
-    "scripts": {
-        "symlink-platform": [
-            "test -d \"platform\" && rm -rf vendor/shopware/platform && ln -s ../../platform vendor/shopware/platform"
-        ],
-        "post-install-cmd": [
-            "@symlink-platform"
-        ],
-        "post-update-cmd": [
-            "@symlink-platform",
-            "ln -sf $PWD/dev-ops/pre-commit vendor/shopware/platform/.git/hooks/pre-commit"
-        ]
+        "shopware/platform": "dev-pickware/fix-production-source-maps as v6.1.0-rc4"
     },
     "require-dev": {
         "ext-tokenizer": "*",
