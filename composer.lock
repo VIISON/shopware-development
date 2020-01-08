@@ -1034,16 +1034,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.13",
+            "version": "2.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "834593d5900615639208417760ba6a17299e2497"
+                "reference": "c4b8d12921999d8a561004371701dbc2e05b5ece"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/834593d5900615639208417760ba6a17299e2497",
-                "reference": "834593d5900615639208417760ba6a17299e2497",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c4b8d12921999d8a561004371701dbc2e05b5ece",
+                "reference": "c4b8d12921999d8a561004371701dbc2e05b5ece",
                 "shasum": ""
             },
             "require": {
@@ -1087,7 +1087,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2019-12-30T08:14:25+00:00"
+            "time": "2020-01-05T14:11:20+00:00"
         },
         {
             "name": "elasticsearch/elasticsearch",
@@ -4014,12 +4014,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shopware/platform.git",
-                "reference": "e8726cb2f81248ed31da6ede4a3e7a7641179332"
+                "reference": "9b01d7570d97baa6c8b0f9577c9892bedd00e911"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shopware/platform/zipball/e8726cb2f81248ed31da6ede4a3e7a7641179332",
-                "reference": "e8726cb2f81248ed31da6ede4a3e7a7641179332",
+                "url": "https://api.github.com/repos/shopware/platform/zipball/9b01d7570d97baa6c8b0f9577c9892bedd00e911",
+                "reference": "9b01d7570d97baa6c8b0f9577c9892bedd00e911",
                 "shasum": ""
             },
             "require": {
@@ -4172,7 +4172,7 @@
                 "framework",
                 "shopware"
             ],
-            "time": "2020-01-06T08:51:12+00:00"
+            "time": "2020-01-08T12:34:24+00:00"
         },
         {
             "name": "sroze/messenger-enqueue-transport",
