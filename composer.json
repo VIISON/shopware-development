@@ -26,7 +26,7 @@
     "require": {
         "php": "~7.2",
         "ocramius/package-versions": "1.4.0",
-        "shopware/platform": "dev-windaishi/fix-super-call-resolving as v6.1.0-rc4"
+        "shopware/platform": "dev-demo-shop as v6.1.0-rc4"
     },
     "require-dev": {
         "ext-tokenizer": "*",

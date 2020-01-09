@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f4729749f1f0539fb0dfca57ccfc8d3",
+    "content-hash": "3b8d8ea45d3ed0af88fab7c7a9c8808c",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -4010,16 +4010,16 @@
         },
         {
             "name": "shopware/platform",
-            "version": "dev-windaishi/fix-super-call-resolving",
+            "version": "dev-demo-shop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickware/shopware-platform.git",
-                "reference": "f663349a6ee4d937054e074c354e452c78cd73ce"
+                "reference": "0b710daa43bfc6ecce46884a1b89830a5b01e2e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickware/shopware-platform/zipball/f663349a6ee4d937054e074c354e452c78cd73ce",
-                "reference": "f663349a6ee4d937054e074c354e452c78cd73ce",
+                "url": "https://api.github.com/repos/pickware/shopware-platform/zipball/0b710daa43bfc6ecce46884a1b89830a5b01e2e7",
+                "reference": "0b710daa43bfc6ecce46884a1b89830a5b01e2e7",
                 "shasum": ""
             },
             "require": {
@@ -4172,10 +4172,10 @@
                 "shopware"
             ],
             "support": {
-                "source": "https://github.com/pickware/shopware-platform/tree/windaishi/fix-super-call-resolving",
+                "source": "https://github.com/pickware/shopware-platform/tree/demo-shop",
                 "issues": "https://github.com/pickware/shopware-platform/issues"
             },
-            "time": "2020-01-09T09:29:44+00:00"
+            "time": "2020-01-09T13:54:31+00:00"
         },
         {
             "name": "sroze/messenger-enqueue-transport",
@@ -10214,7 +10214,7 @@
         {
             "alias": "v6.1.0-rc4",
             "alias_normalized": "6.1.0.0-RC4",
-            "version": "dev-windaishi/fix-super-call-resolving",
+            "version": "dev-demo-shop",
             "package": "shopware/platform"
         }
     ],

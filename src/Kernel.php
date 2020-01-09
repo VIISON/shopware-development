@@ -17,7 +17,7 @@ class Kernel extends \Shopware\Core\Kernel
         ?string $version = null,
         ?Connection $connection = null
     ) {
-        parent::__construct($environment, $debug, $pluginLoader, $cacheId, 'v6.1.0-rc4');
+        parent::__construct($environment, $debug, $pluginLoader, $cacheId, $version);
 
         self::$connection = $connection;
         if (!$connection) {
