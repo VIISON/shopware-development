@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b699ae0f0a0f984107b8f6177dee30a9",
+    "content-hash": "5f4729749f1f0539fb0dfca57ccfc8d3",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -4010,16 +4010,16 @@
         },
         {
             "name": "shopware/platform",
-            "version": "dev-pickware/fix-production-source-maps",
+            "version": "dev-windaishi/fix-super-call-resolving",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickware/shopware-platform.git",
-                "reference": "66e644c06c0fe808320d2a1f20c5f7c9920e0df6"
+                "reference": "f663349a6ee4d937054e074c354e452c78cd73ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickware/shopware-platform/zipball/66e644c06c0fe808320d2a1f20c5f7c9920e0df6",
-                "reference": "66e644c06c0fe808320d2a1f20c5f7c9920e0df6",
+                "url": "https://api.github.com/repos/pickware/shopware-platform/zipball/f663349a6ee4d937054e074c354e452c78cd73ce",
+                "reference": "f663349a6ee4d937054e074c354e452c78cd73ce",
                 "shasum": ""
             },
             "require": {
@@ -4172,10 +4172,10 @@
                 "shopware"
             ],
             "support": {
-                "source": "https://github.com/pickware/shopware-platform/tree/pickware/fix-production-source-maps",
+                "source": "https://github.com/pickware/shopware-platform/tree/windaishi/fix-super-call-resolving",
                 "issues": "https://github.com/pickware/shopware-platform/issues"
             },
-            "time": "2020-01-08T13:04:17+00:00"
+            "time": "2020-01-09T09:29:44+00:00"
         },
         {
             "name": "sroze/messenger-enqueue-transport",
@@ -10214,7 +10214,7 @@
         {
             "alias": "v6.1.0-rc4",
             "alias_normalized": "6.1.0.0-RC4",
-            "version": "dev-pickware/fix-production-source-maps",
+            "version": "dev-windaishi/fix-super-call-resolving",
             "package": "shopware/platform"
         }
     ],
