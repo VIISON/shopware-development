@@ -16,6 +16,10 @@
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:pickware/shopware-platform.git"
         }
     ],
     "config": {
@@ -31,7 +35,7 @@
     "require": {
         "php": "~7.2",
         "ocramius/package-versions": "1.4.0",
-        "shopware/platform": "^6.1.0@rc"
+        "shopware/platform": "dev-package-plugin as v6.1.0-rc4"
     },
     "scripts": {
         "post-update-cmd": [
