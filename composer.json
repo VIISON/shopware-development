@@ -11,13 +11,6 @@
             }
         },
         {
-            "type": "path",
-            "url": "platform",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
             "type": "vcs",
             "url": "git@github.com:pickware/shopware-platform.git"
         }
