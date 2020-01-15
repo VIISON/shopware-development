@@ -35,11 +35,11 @@
     "require": {
         "php": "~7.2",
         "ocramius/package-versions": "1.4.0",
-        "shopware/platform": "dev-package-plugin as v6.1.0-rc4"
+        "shopware/platform": "dev-package-plugin"
     },
     "scripts": {
         "post-update-cmd": [
-            "ln -sf $PWD/dev-ops/pre-commit vendor/shopware/platform/.git/hooks/pre-commit"
+            "[ ! -d vendor/shopware/platform/.git ] || ln -sf $PWD/dev-ops/pre-commit vendor/shopware/platform/.git/hooks/pre-commit"
         ]
     },
     "require-dev": {
