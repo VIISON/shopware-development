@@ -1,40 +1,12 @@
 {
     "name": "shopware/development",
     "type": "project",
+    "description": "",
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "custom/plugins/*",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
-    "config": {
-        "optimize-autoloader": true
-    },
-    "autoload": {
-        "psr-4": {
-            "Shopware\\Development\\": "src/"
-        }
-    },
     "require": {
-        "php": "~7.2",
+        "php": "^7.2",
         "ocramius/package-versions": "1.4.0",
-        "shopware/platform": "^6.1.0@rc"
-    },
-    "scripts": {
-        "symlink-platform": [
-            "test -d \"platform\" && rm -rf vendor/shopware/platform && ln -s ../../platform vendor/shopware/platform"
-        ],
-        "post-install-cmd": [
-            "@symlink-platform"
-        ],
-        "post-update-cmd": [
-            "@symlink-platform",
-            "ln -sf $PWD/dev-ops/pre-commit vendor/shopware/platform/.git/hooks/pre-commit"
-        ]
+        "shopware/platform": "~6.1.0"
     },
     "require-dev": {
         "ext-tokenizer": "*",
@@ -48,10 +20,36 @@
         "smalot/pdfparser": "0.14.0",
         "symfony/browser-kit": "4.4.1",
         "symfony/dependency-injection": "4.4.1",
+        "symfony/dom-crawler": "4.4.1",
         "symfony/phpunit-bridge": "4.4.1",
         "symfony/stopwatch": "4.4.1",
         "symfony/var-dumper": "4.4.1",
-        "symfony/web-profiler-bundle": "4.4.1",
-        "symfony/dom-crawler": "4.4.1"
+        "symfony/web-profiler-bundle": "4.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shopware\\Development\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "custom/plugins/*",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "@symlink-platform"
+        ],
+        "post-update-cmd": [
+            "@symlink-platform",
+            "ln -sf $PWD/dev-ops/pre-commit vendor/shopware/platform/.git/hooks/pre-commit"
+        ],
+        "symlink-platform": [
+            "test -d \"platform\" && rm -rf vendor/shopware/platform && ln -s ../../platform vendor/shopware/platform"
+        ]
     }
 }

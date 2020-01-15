@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26e5e78ff2cb33ef8820ae92827df231",
+    "content-hash": "ccd30e003eda4f41c0133c74b8d8b565",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -156,16 +156,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.5",
+            "version": "1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "62e8fc2dc550e5d6d8c9360c7721662670f58149"
+                "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/62e8fc2dc550e5d6d8c9360c7721662670f58149",
-                "reference": "62e8fc2dc550e5d6d8c9360c7721662670f58149",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
+                "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
                 "shasum": ""
             },
             "require": {
@@ -208,7 +208,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2019-12-11T14:44:42+00:00"
+            "time": "2020-01-13T10:02:55+00:00"
         },
         {
             "name": "composer/composer",
@@ -3888,16 +3888,16 @@
         },
         {
             "name": "seld/phar-utils",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/phar-utils.git",
-                "reference": "7009b5139491975ef6486545a39f3e6dad5ac30a"
+                "reference": "84715761c35808076b00908a20317a3a8a67d17e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/7009b5139491975ef6486545a39f3e6dad5ac30a",
-                "reference": "7009b5139491975ef6486545a39f3e6dad5ac30a",
+                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/84715761c35808076b00908a20317a3a8a67d17e",
+                "reference": "84715761c35808076b00908a20317a3a8a67d17e",
                 "shasum": ""
             },
             "require": {
@@ -3928,7 +3928,7 @@
             "keywords": [
                 "phra"
             ],
-            "time": "2015-10-13T18:44:15+00:00"
+            "time": "2020-01-13T10:41:09+00:00"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -4010,16 +4010,16 @@
         },
         {
             "name": "shopware/platform",
-            "version": "v6.1.0-rc4",
+            "version": "v6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shopware/platform.git",
-                "reference": "aa94506f5e051c024b4b359016fb1d6a23c9c04e"
+                "reference": "01c209a305adaabaf894e6929290c69c4a07adef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shopware/platform/zipball/aa94506f5e051c024b4b359016fb1d6a23c9c04e",
-                "reference": "aa94506f5e051c024b4b359016fb1d6a23c9c04e",
+                "url": "https://api.github.com/repos/shopware/platform/zipball/01c209a305adaabaf894e6929290c69c4a07adef",
+                "reference": "01c209a305adaabaf894e6929290c69c4a07adef",
                 "shasum": ""
             },
             "require": {
@@ -4172,7 +4172,7 @@
                 "framework",
                 "shopware"
             ],
-            "time": "2020-01-06T10:49:34+00:00"
+            "time": "2020-01-10T10:04:30+00:00"
         },
         {
             "name": "sroze/messenger-enqueue-transport",
@@ -10209,13 +10209,11 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "shopware/platform": 5
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "~7.2"
+        "php": "^7.2"
     },
     "platform-dev": {
         "ext-tokenizer": "*",
