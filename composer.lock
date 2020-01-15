@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b8d8ea45d3ed0af88fab7c7a9c8808c",
+    "content-hash": "cbd7ac276ca23466aa1a498b4100ad94",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -4014,12 +4014,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickware/shopware-platform.git",
-                "reference": "0b710daa43bfc6ecce46884a1b89830a5b01e2e7"
+                "reference": "0b61d71755cf4162a058f66d98b4043a01380daf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickware/shopware-platform/zipball/0b710daa43bfc6ecce46884a1b89830a5b01e2e7",
-                "reference": "0b710daa43bfc6ecce46884a1b89830a5b01e2e7",
+                "url": "https://api.github.com/repos/pickware/shopware-platform/zipball/0b61d71755cf4162a058f66d98b4043a01380daf",
+                "reference": "0b61d71755cf4162a058f66d98b4043a01380daf",
                 "shasum": ""
             },
             "require": {
@@ -4145,6 +4145,11 @@
                 "symfony/web-profiler-bundle": "4.4.1"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-demo-shop": "6.1.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Shopware\\Administration\\": "src/Administration/",
@@ -4175,7 +4180,7 @@
                 "source": "https://github.com/pickware/shopware-platform/tree/demo-shop",
                 "issues": "https://github.com/pickware/shopware-platform/issues"
             },
-            "time": "2020-01-09T13:54:31+00:00"
+            "time": "2020-01-15T16:06:22+00:00"
         },
         {
             "name": "sroze/messenger-enqueue-transport",
@@ -10210,14 +10215,7 @@
             "time": "2019-11-24T13:36:37+00:00"
         }
     ],
-    "aliases": [
-        {
-            "alias": "v6.1.0-rc4",
-            "alias_normalized": "6.1.0.0-RC4",
-            "version": "dev-demo-shop",
-            "package": "shopware/platform"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "shopware/platform": 20
