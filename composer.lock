@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dedba35ce8add4b67496d6d8dd9486e0",
+    "content-hash": "6153a4414f14e3f8fca3a0cc663ccf84",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -4011,10 +4011,16 @@
         {
             "name": "shopware/platform",
             "version": "dev-package-plugin",
-            "dist": {
-                "type": "path",
-                "url": "platform",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pickware/shopware-platform.git",
                 "reference": "171c09bdf550bfb4822cfb4c3e05bb59e4e49af4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pickware/shopware-platform/zipball/171c09bdf550bfb4822cfb4c3e05bb59e4e49af4",
+                "reference": "171c09bdf550bfb4822cfb4c3e05bb59e4e49af4",
+                "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "3.115.1",
@@ -4170,9 +4176,11 @@
                 "framework",
                 "shopware"
             ],
-            "transport-options": {
-                "symlink": true
-            }
+            "support": {
+                "source": "https://github.com/pickware/shopware-platform/tree/package-plugin",
+                "issues": "https://github.com/pickware/shopware-platform/issues"
+            },
+            "time": "2020-01-15T16:35:55+00:00"
         },
         {
             "name": "sroze/messenger-enqueue-transport",
