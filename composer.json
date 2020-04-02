@@ -2,15 +2,6 @@
     "name": "shopware/development",
     "type": "project",
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "custom/plugins/*",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "config": {
         "optimize-autoloader": true
     },
