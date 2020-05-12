@@ -1,6 +1,6 @@
 <?php
 
-use Doctrine\DBAL\Exception\ConnectionException;
+use Doctrine\DBAL\DBALException;
 use PackageVersions\Versions;
 use Shopware\Core\Framework\Event\BeforeSendResponseEvent;
 use Shopware\Core\Framework\Adapter\Cache\CacheIdLoader;
@@ -12,6 +12,14 @@ use Symfony\Component\Debug\Debug;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\HttpCache\HttpCache;
+
+if (PHP_VERSION_ID < 70200) {
+    header('Content-type: text/html; charset=utf-8', true, 503);
+
+    echo '<h2>Error</h2>';
+    echo 'Your server is running PHP version ' . PHP_VERSION . ' but Shopware 6 requires at least PHP 7.2.0';
+    exit();
+}
 
 $classLoader = require __DIR__.'/../vendor/autoload.php';
 
@@ -96,8 +104,10 @@ try {
 
     $response = $event->getResponse();
 
-} catch (ConnectionException $e) {
-    throw new RuntimeException($e->getMessage());
+} catch (DBALException $e) {
+    $message = str_replace([$connection->getParams()['password'], $connection->getParams()['user']], '******', $e->getMessage());
+
+    throw new RuntimeException(sprintf('Could not connect to database. Message from SQL Server: %s', $message));
 }
 
 $response->send();

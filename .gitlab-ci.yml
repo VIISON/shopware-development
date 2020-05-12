@@ -10,6 +10,7 @@ cache:
     key: "Eternal static key"
     paths:
         - .composer
+        - .npm
 
 Unit:
     image: composer:1.9
@@ -57,6 +58,7 @@ build:7.2:
         PHP_VERSION: "7.2"
     after_script:
         - docker tag $IMAGE_TAG:$PHP_VERSION $IMAGE_TAG:latest
+        - docker push $IMAGE_TAG:latest
 
 build:7.3:
     extends: .base

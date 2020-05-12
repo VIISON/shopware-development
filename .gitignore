@@ -63,4 +63,5 @@ chromedriver.log
 /phpunit.xml
 ###< phpunit/phpunit ###
 
-composer.lock
+# Do not check in composer.lock, so the newest Shopware patch release is installed everytime the demo Shop is built
+/composer.lock
