@@ -16,6 +16,10 @@
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:pickware/shopware-platform.git"
         }
     ],
     "config": {
@@ -34,7 +38,7 @@
     "require": {
         "php": "~7.2",
         "composer/package-versions-deprecated": "1.8.0",
-        "shopware/platform": "6.3.x@dev"
+        "shopware/platform": "dev-pickware/add-net-and-gross-purchase-prices-6.3@dev"
     },
     "scripts": {
         "post-update-cmd": [
