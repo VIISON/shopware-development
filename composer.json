@@ -19,7 +19,7 @@
         },
         {
             "type": "vcs",
-            "url": "git@github.com:pickware/shopware-platform-private.git"
+            "url": "git@github.com:pickware/shopware-platform.git"
         }
     ],
     "config": {
@@ -38,7 +38,7 @@
     "require": {
         "php": "~7.2",
         "composer/package-versions-deprecated": "1.8.0",
-        "shopware/platform": "dev-pickware/add-security-prompt-before-plugin-uninstall-with-availability-for-save-uninstall@dev"
+        "shopware/platform": "dev-pickware/add-security-prompt-before-plugin-uninstall-with-availability-for-save-uninstall-6.2@dev"
     },
     "scripts": {
         "post-update-cmd": [
