@@ -19,7 +19,7 @@
         },
         {
             "type": "vcs",
-            "url": "git@github.com:pickware/shopware-platform.git"
+            "url": "git@github.com:pickware/shopware-platform-private.git"
         }
     ],
     "config": {
@@ -38,7 +38,7 @@
     "require": {
         "php": "~7.2",
         "composer/package-versions-deprecated": "1.8.0",
-        "shopware/platform": "dev-pickware/add-net-and-gross-purchase-prices-6.3@dev"
+        "shopware/platform": "dev-pickware/add-security-prompt-before-plugin-uninstall-with-availability-for-save-uninstall@dev"
     },
     "scripts": {
         "post-update-cmd": [
