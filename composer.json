@@ -16,7 +16,7 @@
     "require": {
         "php": "~7.2",
         "composer/package-versions-deprecated": "^1.8.0",
-        "shopware/platform": "6.3.2.0-dev || 6.3.2.*"
+        "shopware/platform": "6.3.3.0-dev || 6.3.3.*"
     },
     "require-dev": {
         "ext-tokenizer": "*",
